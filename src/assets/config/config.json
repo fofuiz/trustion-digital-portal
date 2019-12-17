@@ -1,0 +1,11 @@
+{
+    "propertySources": [
+        {
+            "source": {
+                "spring.profiles": "develop",
+                "api.oauth2UrlToken": "http://localhost:8080/trustion-digital-api/oauth/token",
+                "api.oauth2UrlAuthorities": "http://localhost:8080/trustion-digital-api/auth/authorities/"
+            }
+        }
+    ]
+}

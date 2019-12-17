@@ -1,0 +1,62 @@
+<div class="auth-container">
+
+        <div class="input-container">
+            <mat-card>
+                <mat-card-title class="title">
+                    <img src="../assets/trustion/trustion-logo.png" style="width: 200px;">
+                </mat-card-title>
+                <mat-card-content>
+                    <form>
+                        <p>
+                            <mat-form-field 
+                                id="fieldUserLogin" 
+                                [class.invalid]="showInvalid['user']">
+
+                                <input 
+                                    #inputUser
+                                    matInput 
+                                    type="text" 
+                                    id="inputUserLogin"
+                                    class="default-input" 
+                                    placeholder="Login"                                     
+                                    [formControl]="formControluserLogin"                                     
+                                    maxlength="20">
+                            </mat-form-field>
+                        </p>
+
+                        <p>
+                            <mat-form-field 
+                                id="fieldUserPass" 
+                                [class.invalid]="showInvalid['password']">
+
+                                <input 
+                                    #inputPass
+                                    matInput 
+                                    type="password" 
+                                    id="inputUserPass"
+                                    class="default-input" 
+                                    placeholder="Senha"                                     
+                                    [formControl]="formControluserPass"                                     
+                                    maxlength="20">
+                            </mat-form-field>
+                        </p>
+
+                        <div class="div-button">
+                            <button 
+                                i18n="@@loginButton"
+                                type="submit" 
+                                (click)="clickLogin()" 
+                                mat-button 
+                                mat-raised-button 
+                                class="success__button">
+
+                                Login
+                            </button>
+                        </div>
+
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="header-container primary-gradient">
+  
+    <div style="display: flex; flex-direction: row; height: 100%; padding: 0px 20px;">
+        <div style="width: 50%; height: 100%">
+            <div style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center; height: 100%">
+                <button id="toggleToolbarButton" type="button" (click)="toggleMenu()" mat-mini-fab>
+                    <mat-icon 
+                        class="toggle-sidenav-button"
+                        fontSet="fas" 
+                        fontIcon="fa-bars">
+                    </mat-icon>
+                </button>
+                <img id="logoImage" height="40px" style="padding-left: 20px">
+            </div>
+        </div>
+        <div style="width: 50%; height: 100%">
+            <div style="display: flex; flex-direction: row; justify-content: flex-end; align-items: center; height: 100%">
+                <button id="logoutToolbarButton" type="button" (click)="clickLogout()" mat-mini-fab>
+                    <mat-icon 
+                        class="logout-button"
+                        fontSet="fas" 
+                        fontIcon="fa-sign-out-alt">
+                    </mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>   
+
+</div>

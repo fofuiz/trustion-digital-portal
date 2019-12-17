@@ -1,0 +1,79 @@
+<mat-tree 
+id="treeElem"
+[dataSource]="dataSource" 
+[treeControl]="treeControl">
+    <mat-tree-node 
+        matTreeNodePadding
+        *matTreeNodeDef="let node"
+        id="childnode_{{node.id}}"
+        class="childnode"
+        [class.childnode--selected]='node.isSelected'>
+        <div 
+            *ngIf="node.hasPermission"
+            class="childnode__box">
+            <button 
+                mat-button                
+                [attr.aria-label]="'toggle ' + node.name"
+                [ngClass]="node?.style"
+                class="childnode__button"
+                (click)="clickMenuChildOption(node)">
+                <div 
+                    class="childnode__iconbox">
+                    <mat-icon 
+                        *ngIf="node.fontSet && node.fontIcon"
+                        class="childnode__icon accent-color"
+                        [fontSet]="node.fontSet" 
+                        [fontIcon]="node.fontIcon">
+                    </mat-icon>
+                    <p 
+                        class="childnode__title mat-body mat-body-1 accent-color">
+                        {{node.name}}
+                    </p>
+                </div>                
+            </button>
+        </div>
+    </mat-tree-node>    
+    <mat-tree-node 
+        matTreeNodePadding
+        *matTreeNodeDef="let node; when:hasChild"
+        id="parentnode_{{node.id}}"
+        class="parentnode"
+        [class.parentnode--selected]='node.isSelected'
+        [class.parentnode--full]="miniBarStateOpen"
+        [class.parentnode--mini]="!miniBarStateOpen">
+        <div 
+            class="parentnode__box"
+            *ngIf="node.hasPermission">
+            <button 
+                class="parentnode__button"
+                mat-button 
+                matTreeNodeToggle
+                matTooltip="{{node.tooltip}}"
+                [ngClass]="node?.style"
+                (click)="clickMenuParentOption(node)"
+                [matTooltipPosition]="tooltipPositionAfter"
+                [attr.aria-label]="'toggle ' + node.name">
+                <div 
+                    [class.parentnode__iconbox--full]="miniBarStateOpen"
+                    [class.parentnode__iconbox--mini]="!miniBarStateOpen">
+                    <mat-icon 
+                        class="parentnode__icon accent-color"
+                        *ngIf="node.fontSet && node.fontIcon"
+                        [fontSet]="node.fontSet" 
+                        [fontIcon]="node.fontIcon">
+                    </mat-icon>
+                    <p  
+                        *ngIf="miniBarStateOpen" 
+                        class="parentnode__title--open mat-body-strong mat-body-2 accent-color">
+                        {{node.name}}
+                    </p>
+                    <p 
+                        *ngIf="!miniBarStateOpen" 
+                        class="parentnode__title--closed mat-small accent-color">
+                        {{node.name}}
+                    </p>
+                </div>                
+            </button>
+        </div>
+    </mat-tree-node>
+</mat-tree>

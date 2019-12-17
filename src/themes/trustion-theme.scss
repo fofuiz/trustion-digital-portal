@@ -1,0 +1,41 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary: mat-palette($mat-teal, 50);
+$accent:mat-palette($mat-teal, 900);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+.primary-background { background-color: mat-color($primary) }
+.accent-background { background-color: mat-color($accent) }
+.warn-background { background-color: mat-color($warn) }
+.primary-color { color: mat-color($primary) }
+.accent-color { color: mat-color($accent) }
+.warn-color { color: mat-color($warn) }
+.primary-gradient { background-image: linear-gradient(to right, mat-color($primary) , white) }
+.accent-gradient { background-image: linear-gradient(to right, mat-color($primary) , white) }
+.warn-gradient { background-image: linear-gradient(to right, mat-color($primary) , white) }
+
+@include angular-material-theme($theme);
+
+$digital-primary: mat-palette($mat-purple, 400);
+$digital-accent:mat-palette($mat-purple, 700);
+$digital-warn: mat-palette($mat-red);
+
+$digital-theme: mat-light-theme($digital-primary, $digital-accent, $digital-warn);
+.digital-theme {
+    .primary-background { background-color: mat-color($digital-primary) }
+    .accent-background { background-color: mat-color($digital-accent) }
+    .warn-background { background-color: mat-color($digital-warn) }
+    .primary-color { color: mat-color($digital-primary) }
+    .accent-color { color: mat-color($digital-accent) }
+    .warn-color { color: mat-color($digital-warn) }
+    .primary-gradient { background-image: linear-gradient(to right, mat-color($digital-primary) , white) }
+    .accent-gradient { background-image: linear-gradient(to right, mat-color($digital-primary) , white) }
+    .warn-gradient { background-image: linear-gradient(to right, mat-color($digital-primary) , white) }   
+    @include angular-material-theme($digital-theme);
+}
+
+
+
+

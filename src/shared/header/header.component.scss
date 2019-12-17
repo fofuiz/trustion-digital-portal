@@ -1,0 +1,101 @@
+.header-container {    
+    height: 60px;    
+    // margin: 10px;
+    // border-radius: 6px;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);    
+
+    .toolbar-icon {
+        padding: 0 14px;
+    }
+      
+    .toolbar-spacer {
+        flex: 1 1 auto;
+    }
+
+    // .login-content, 
+    // .logged-content {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: flex-start;
+    //     align-items: flex-start;
+    //     align-content: space-between;
+    //     flex-wrap: nowrap;        
+
+    //     .input-container {
+    //         display: flex;
+    //         flex-direction: row;
+    //         justify-content: flex-start;
+    //         align-items: flex-start;
+    //         align-content: space-between;
+    //         flex-wrap: nowrap;           
+
+    //         input {
+    //             &.default-input {
+    //                 border: solid 1px #000;
+    //                 color: #000;
+    //             }
+    //         }
+    //     }
+
+    //     .button-container { 
+    //         display: flex;
+    //         flex-direction: row;
+    //         justify-content: flex-start;
+    //         align-items: flex-start;
+    //         align-content: space-between;
+    //         flex-wrap: nowrap;                    
+
+    //         p {
+    //             margin: 0px;
+    //             padding: 0px;
+    //         }
+
+            button {
+                cursor: pointer; 
+
+                mat-icon {
+                    &.logout-button {
+                        font-size: 18px;
+                        line-height: 23px;
+                    }
+
+                    &.toggle-sidenav-button {
+                        font-size: 18px;
+                        line-height: 23px;
+                    }
+                }
+            }
+
+            //     &.toolbar-button {            
+            //         width: 20px;
+            //         height: 20px;
+            //         margin: 0px;
+            //         padding: 0px;
+            //         background: transparent;
+            //         border: none;
+            //     }
+        
+            //     &.default-button {
+            //         border: solid 1px #000;
+            //         color: #000;
+            //     }
+                
+            //     &.clean-button {
+            //         display: flex !important;
+            //         flex-direction: row;
+            //         justify-content: flex-start;
+            //         align-items: flex-start;
+            //         align-content: space-between;
+            //         flex-wrap: nowrap; 
+                    
+            //         border: none;
+            //         background-color: transparent;
+            //         padding: unset;
+            //         margin: unset;
+            //         color: #000;
+            //     }        
+            // }
+    //     }
+    // }
+
+}

@@ -1,0 +1,15 @@
+pipeline_template: pipeline/angular8/jenkinsfile
+docker:
+   baseImage: nginx-generic-alpine
+kubernetes:
+  namespace: l1-frontend-trustion-digital-portal
+  containerPort: 4200
+  nodePort: 30334
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "30m"
+    limits:
+      memory: "80Mi"
+      cpu: "50m"
+  replicas: 1

@@ -1,0 +1,33 @@
+<div class="input-container">
+    <mat-card>
+        <mat-card-title class="title">
+            <p class="accent-color">Nova permissão</p>
+        </mat-card-title>
+        <mat-card-content>
+            <form>
+                <p>
+                    <mat-form-field 
+                        id="fieldPermission" 
+                        [class.invalid]="showInvalid['permission']">
+
+                        <input 
+                            #inputPermission
+                            matInput 
+                            type="text" 
+                            id="inputPermission"
+                            class="default-input" 
+                            placeholder="Nome da permissão"                                     
+                            [formControl]="formControlPermission"
+                            maxlength="20">
+                    </mat-form-field>
+                </p>
+                <button 
+                    (click)="clickSavePermission()"
+                    mat-raised-button 
+                    color="primary">
+                    Test
+                </button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

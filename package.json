@@ -1,0 +1,71 @@
+{
+  "name": "trustion-digital-portal",
+  "description": "Portal referente aos serviços de cartões digitais.",
+  "group": "br.com.trustion.digital",
+  "version": "1.0.0",
+  "contributors": [
+    {
+      "name": "Trustion",
+      "url": "https://www.trustion.com/"
+    }
+  ],
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "start:dev:en": "ng serve -c=deven",
+    "start:hml:en": "ng serve -c=hmlen",
+    "start:dev:pt": "ng serve -c=devpt",
+    "start:hml:pt": "ng serve -c=hmlpt",
+    "build:en": "ng build --prod --aot -c=en --buildOptimizer --commonChunk --vendorChunk --optimization --progress --base-href ./",
+    "build:pt": "ng build --prod --aot -c=pt --buildOptimizer --commonChunk --vendorChunk --optimization --progress --base-href ./",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "sonar": "sonar-scanner"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.2.8",
+    "@angular/cdk": "~8.2.2",
+    "@angular/common": "~8.2.8",
+    "@angular/compiler": "~8.2.8",
+    "@angular/core": "~8.2.8",
+    "@angular/forms": "~8.2.8",
+    "@angular/material": "^8.2.2",
+    "@angular/platform-browser": "~8.2.8",
+    "@angular/platform-browser-dynamic": "~8.2.8",
+    "@angular/router": "~8.2.8",
+    "@auth0/angular-jwt": "^2.1.2",
+    "hammerjs": "^2.0.8",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.802.2",
+    "@angular/cli": "^8.3.20",
+    "@angular/compiler-cli": "~8.2.0",
+    "@angular/language-service": "~8.2.0",
+    "@types/jasmine": "~3.3.8",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "codelyzer": "^5.0.0",
+    "jasmine-core": "~3.4.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.1.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
+    "protractor": "~5.4.0",
+    "sonar-scanner": "^3.1.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.5.3"
+  },
+  "engines": {
+    "angularCli": ">= 8.3.18",
+    "node": ">= 12.13.0",
+    "npm": ">= 6.12.0"
+  }
+}

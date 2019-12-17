@@ -1,0 +1,16 @@
+    <app-header></app-header>
+    <mat-sidenav-container #container class="sidenav-container" autosize>
+        <mat-sidenav 
+            id="sideElem"
+            #sidenav 
+            mode="side" 
+            class="drawer-transition minibar-raised">    
+            <app-menu></app-menu>
+        </mat-sidenav>    
+        <mat-sidenav-content 
+            id="mainContent"
+            (click)="setMiniBarState(false)"
+            class="drawer-transition sidenav-content">    
+            <router-outlet name="sideview"></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>

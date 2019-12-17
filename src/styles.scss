@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+// @import '@angular/material/prebuilt-themes/purple-green.css';
+// @import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-drawer-inner-container {
+    overflow: hidden !important;
+}
+
+.mat-drawer-inner-container:hover {
+    overflow-y: auto !important;
+}
+
+.drawer-transition {
+    -webkit-transition: all .4s cubic-bezier(0.25, .8, .25, 1) !important;
+    transition: all .4s cubic-bezier(0.25, .8, .25, 1) !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+// Button
+// Depois separar em módulos: button.scss, etc e dar o import lá emcima
+
+.success__button {
+    color: white; 
+    background-color:#00a552
+}
